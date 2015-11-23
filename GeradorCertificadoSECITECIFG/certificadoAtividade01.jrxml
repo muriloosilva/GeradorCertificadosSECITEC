@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="certificadoAtividade01" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c05fa0a7-aba0-43cf-b55b-df27dd628406">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Estagio\\Desktop\\iReport-5.6.0\\reports\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="atividade" class="java.util.List">
+		<fieldDescription><![CDATA[atividade]]></fieldDescription>
+	</field>
+	<field name="cargaTotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[cargaTotal]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<field name="cpf" class="java.lang.String">
+		<fieldDescription><![CDATA[cpf]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="545" splitType="Stretch">
+			<staticText>
+				<reportElement x="467" y="442" width="302" height="20" uuid="9a87b6c4-12cc-4953-9632-4509f40d1f34"/>
+				<textElement textAlignment="Center" markup="html"/>
+				<text><![CDATA[<i>Portaria nº 1828 de 29 de Setembro de 2014</i>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="442" width="302" height="15" uuid="932c893b-dcf7-4857-89e2-3df4966016cd"/>
+				<textElement textAlignment="Center" markup="html"/>
+				<text><![CDATA[<i>Portaria nº 203 de 31 de Janeiro de 2014</i>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="407" width="302" height="18" uuid="904a190d-9ef8-487b-bb4d-1bd10860b31a"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" markup="html">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[<b>Waldeyr Mendes Cordeiro da Silva</b>]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="72" y="152" width="697" height="155" uuid="bddfaf67-651d-4fcc-995c-13fea7798a25"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<pre>		Certificamos que <b>" + $F{nome} + "</b> participou das seguintes atividades (no verso) da <b>V Semana de Educação, Ciência e Tecnologia</b> do IFG Câmpus Formosa nos dias 12, 13 e 14 de Novembro de 2014. Carga horária total: " + $F{cargaTotal} + " horas.</pre>"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="467" y="425" width="302" height="17" uuid="77589562-5fe1-478c-9b85-dcec75527b3c"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="html">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Presidente da Comissão Organizadora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="425" width="302" height="17" uuid="e336d433-b992-421b-8d4d-74e67a8d627e"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Diretor Geral do Câmpus Formosa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="407" width="302" height="18" uuid="b2bc744c-e26f-46cc-a08f-a342e5767573"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" markup="html">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[<b>Edson Rodrigo Borges</b>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="307" width="410" height="42" uuid="65e4c22f-2b3a-4584-9f5d-fa72feb33895"/>
+				<textElement textAlignment="Right">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Formosa - GO, 27 de Novembro de 2014.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="387" width="302" height="20" uuid="b625c59c-e433-4426-ace3-73195cce8c0b"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="387" width="302" height="20" uuid="385d15b2-3f16-4156-8fff-a50cb68413aa"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+		</band>
+		<band height="595">
+			<subreport>
+				<reportElement x="72" y="19" width="698" height="51" uuid="79882a3d-d5a9-4e2a-9879-dc58e33b504c"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{atividade})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subreportAtividade01.jasper"]]></subreportExpression>
+			</subreport>
+			<rectangle>
+				<reportElement x="511" y="477" width="258" height="108" uuid="5157a3ec-7209-48b6-9e0b-5129bfc6d174"/>
+			</rectangle>
+			<textField>
+				<reportElement x="511" y="477" width="258" height="108" uuid="905efccc-9b45-4880-bec9-4c73d547b84f"/>
+				<textElement textAlignment="Center" markup="html"/>
+				<textFieldExpression><![CDATA["CERTIFICADO REGISTRADO NO LIVRO IV - GEPPEX/IFG/FORMOSA<br><br>27 / NOVEMBRO / 2014<br><br><br>____________________________<br>Assinatura"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="72" y="477" width="155" height="29" uuid="d7cd1147-e31b-4cf5-9ffe-d84c2721c14a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Carga Horária Total:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="227" y="477" width="161" height="29" uuid="7a271993-ef5c-43b2-a641-b4b645589b5a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cargaTotal} + " horas"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

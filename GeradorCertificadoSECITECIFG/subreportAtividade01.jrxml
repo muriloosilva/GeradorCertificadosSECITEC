@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subreportAtividade01" pageWidth="698" pageHeight="288" orientation="Landscape" columnWidth="698" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c24ac2db-63f6-453c-b62d-66066fa40ed4">
+	<property name="ireport.zoom" value="1.210000000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="idAtivid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[idAtivid]]></fieldDescription>
+	</field>
+	<field name="tipoAtivid" class="java.lang.String">
+		<fieldDescription><![CDATA[tipoAtivid]]></fieldDescription>
+	</field>
+	<field name="dataAtivid" class="java.lang.String">
+		<fieldDescription><![CDATA[dataAtivid]]></fieldDescription>
+	</field>
+	<field name="nomeAtivid" class="java.lang.String">
+		<fieldDescription><![CDATA[nomeAtivid]]></fieldDescription>
+	</field>
+	<field name="cargaAtivid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[cargaAtivid]]></fieldDescription>
+	</field>
+	<columnHeader>
+		<band height="40">
+			<staticText>
+				<reportElement x="0" y="10" width="322" height="26" uuid="3238df34-4914-47c0-a521-3bb4d4fe4335"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Atividade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="10" width="133" height="26" uuid="495a406d-c22a-4a55-8b62-fa763c72dc61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="10" width="118" height="26" uuid="5fc26d28-b4d9-4d2a-ac3b-cf35f731dc43"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="573" y="10" width="125" height="26" uuid="63046ff0-2876-4717-a715-c643d0f0e90e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Carga Horária]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="36" width="698" height="1" uuid="124284c5-e963-41e0-8a83-b9d94ea698e0"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="69" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="3" width="322" height="61" uuid="f824dca2-18c4-4b37-8d57-d33b4f018754"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomeAtivid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="3" width="133" height="61" uuid="de26c77e-78ea-4e62-84d9-b9e990e1c09b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoAtivid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="573" y="3" width="125" height="61" uuid="bd1d0da4-801e-4be8-98b1-88d77388eccc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cargaAtivid} + " horas"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="64" width="698" height="1" uuid="9af1f880-13ac-4aac-aac6-dfe57b10a54d"/>
+			</line>
+			<textField>
+				<reportElement x="455" y="3" width="118" height="61" uuid="12fb4fa4-a3ff-4740-b4a3-c3e537fee90f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dataAtivid}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

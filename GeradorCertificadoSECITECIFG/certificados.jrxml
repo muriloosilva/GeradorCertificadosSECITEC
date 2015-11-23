@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="certificados" language="groovy" pageWidth="802" pageHeight="555" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="e80e8cd0-56ac-43de-b5ab-ac3ea12ae07e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="548"/>
+	<queryString>
+		<![CDATA[select * from certificados]]>
+	</queryString>
+	<field name="nome" class="java.lang.String"/>
+	<field name="cpf" class="java.lang.String"/>
+	<field name="carga" class="java.lang.Integer"/>
+	<group name="nome">
+		<groupExpression><![CDATA[$F{nome}]]></groupExpression>
+	</group>
+	<detail>
+		<band height="555" splitType="Stretch">
+			<textField>
+				<reportElement x="72" y="151" width="658" height="155" uuid="ac07b7e9-7463-480e-9560-dba07fd09268"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<pre>		Certificamos que <b>" + $F{nome} + "</b> participou da <b>V Semana de Educação, Ciência e Tecnologia</b> do IFG Câmpus Formosa nos dias 12, 13 e 14 de Novembro de 2014, com carga horária de " + $F{carga} + " horas.</pre>"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="72" y="397" width="263" height="18" uuid="ded62bcc-42a9-4547-833f-e19391d8da9d"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" markup="html">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[<b>Edson Rodrigo Borges</b>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="397" width="263" height="18" uuid="215fb8f1-23a2-4c83-b72c-bd2ca7987c48"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" markup="html">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[<b>Waldeyr Mendes Cordeiro da Silva</b>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="415" width="263" height="17" uuid="6d9e6f27-496b-4e05-b089-e60dbe81dad9"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Diretor Geral do Câmpus Formosa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="432" width="263" height="15" uuid="c106f0c9-c2a0-462e-93d4-04abfe56f0db"/>
+				<textElement textAlignment="Center" markup="html"/>
+				<text><![CDATA[<i>Portaria nº 203 de 31 de Janeiro de 2014</i>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="415" width="263" height="17" uuid="ea553d0d-6656-444b-bb1c-152a9b8a057e"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="html">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Presidente da Comissão Organizadora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="377" width="263" height="20" uuid="02954fc9-a0b5-4fb6-a9d7-7c816ea877bb"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="377" width="263" height="20" uuid="addeba70-fef4-4c41-970b-98882bdca90f"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="432" width="263" height="20" uuid="aa9a3248-ebfa-4566-b65c-4cdcb540b7d5"/>
+				<textElement textAlignment="Center" markup="html"/>
+				<text><![CDATA[<i>Portaria nº 1828 de 29 de Setembro de 2014</i>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="359" y="306" width="371" height="42" uuid="06bfa138-a33d-4da5-afd4-0859afd2f938"/>
+				<textElement textAlignment="Right">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Formosa - GO, 24 de Novembro de 2014.]]></text>
+			</staticText>
+		</band>
+		<band height="555">
+			<rectangle>
+				<reportElement x="472" y="407" width="258" height="108" uuid="ba5f13e1-7e77-4f57-bcc8-b237de02ad4a"/>
+			</rectangle>
+			<textField>
+				<reportElement x="472" y="407" width="258" height="108" uuid="b92475dd-44b1-418d-8c0f-4e37d9e4b9a1"/>
+				<textElement textAlignment="Center" markup="html"/>
+				<textFieldExpression><![CDATA["CERTIFICADO REGISTRADO NO LIVRO IV - GEPPEX/IFG/FORMOSA<br><br>27 / NOVEMBRO / 2014<br><br><br>____________________________<br>Assinatura"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="630" y="12" width="100" height="372" uuid="06919ddb-c7a6-4e3a-b177-32f08b032af1"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
