@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="certificadoAtividade01" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c05fa0a7-aba0-43cf-b55b-df27dd628406">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="48"/>
+	<property name="ireport.x" value="32"/>
+	<property name="ireport.y" value="793"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
-		<defaultValueExpression><![CDATA["C:\\Users\\Estagio\\Desktop\\iReport-5.6.0\\reports\\"]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA["/Users/Murilo/git/geradorcertificadossecitecifg/GeradorCertificadoSECITECIFG/"]]></defaultValueExpression>
 	</parameter>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
-	<field name="atividade" class="java.util.List">
-		<fieldDescription><![CDATA[atividade]]></fieldDescription>
+	<field name="atividades" class="java.util.List">
+		<fieldDescription><![CDATA[atividades]]></fieldDescription>
 	</field>
-	<field name="cargaTotal" class="java.lang.Integer">
+	<field name="cargaTotal" class="java.lang.String">
 		<fieldDescription><![CDATA[cargaTotal]]></fieldDescription>
 	</field>
 	<field name="nome" class="java.lang.String">
 		<fieldDescription><![CDATA[nome]]></fieldDescription>
-	</field>
-	<field name="cpf" class="java.lang.String">
-		<fieldDescription><![CDATA[cpf]]></fieldDescription>
 	</field>
 	<detail>
 		<band height="545" splitType="Stretch">
 			<staticText>
 				<reportElement x="467" y="442" width="302" height="20" uuid="9a87b6c4-12cc-4953-9632-4509f40d1f34"/>
 				<textElement textAlignment="Center" markup="html"/>
-				<text><![CDATA[<i>Portaria nº 1828 de 29 de Setembro de 2014</i>]]></text>
+				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="72" y="442" width="302" height="15" uuid="932c893b-dcf7-4857-89e2-3df4966016cd"/>
@@ -38,14 +35,14 @@
 				<textElement textAlignment="Center" verticalAlignment="Bottom" markup="html">
 					<font size="14"/>
 				</textElement>
-				<text><![CDATA[<b>Waldeyr Mendes Cordeiro da Silva</b>]]></text>
+				<text><![CDATA[<b>Daniela Pereira Versieux</b>]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="72" y="152" width="697" height="155" uuid="bddfaf67-651d-4fcc-995c-13fea7798a25"/>
 				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
 					<font size="20"/>
 				</textElement>
-				<textFieldExpression><![CDATA["<pre>		Certificamos que <b>" + $F{nome} + "</b> participou das seguintes atividades (no verso) da <b>V Semana de Educação, Ciência e Tecnologia</b> do IFG Câmpus Formosa nos dias 12, 13 e 14 de Novembro de 2014. Carga horária total: " + $F{cargaTotal} + " horas.</pre>"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["<pre>		Certificamos que <b>" + $F{nome} + "</b> participou da <b>VI Semana de Educação, Ciência e Tecnologia</b> do IFG Câmpus Formosa nos dias 16, 17 e 18 de Novembro de 2015, com carga horária de " + $F{cargaTotal} + " horas. As atividades participantes estão discriminadas no verso.</pre>"]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="467" y="425" width="302" height="17" uuid="77589562-5fe1-478c-9b85-dcec75527b3c"/>
@@ -73,7 +70,7 @@
 				<textElement textAlignment="Right">
 					<font size="20"/>
 				</textElement>
-				<text><![CDATA[Formosa - GO, 27 de Novembro de 2014.]]></text>
+				<text><![CDATA[Formosa - GO, 14 de Dezembro de 2015.]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="467" y="387" width="302" height="20" uuid="b625c59c-e433-4426-ace3-73195cce8c0b"/>
@@ -89,7 +86,7 @@
 		<band height="595">
 			<subreport>
 				<reportElement x="72" y="19" width="698" height="51" uuid="79882a3d-d5a9-4e2a-9879-dc58e33b504c"/>
-				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{atividade})]]></dataSourceExpression>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{atividades})]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "subreportAtividade01.jasper"]]></subreportExpression>
 			</subreport>
 			<rectangle>
@@ -112,7 +109,7 @@
 				<textElement verticalAlignment="Middle">
 					<font size="16"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{cargaTotal} + " horas"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{cargaTotal}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
