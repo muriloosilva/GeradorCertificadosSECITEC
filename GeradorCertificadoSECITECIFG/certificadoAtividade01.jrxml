@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="certificadoAtividade01" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c05fa0a7-aba0-43cf-b55b-df27dd628406">
 	<property name="ireport.zoom" value="1.0"/>
-	<property name="ireport.x" value="32"/>
-	<property name="ireport.y" value="793"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="628"/>
 	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["/Users/Murilo/git/geradorcertificadossecitecifg/GeradorCertificadoSECITECIFG/"]]></defaultValueExpression>
 	</parameter>
@@ -20,20 +20,19 @@
 	</field>
 	<detail>
 		<band height="545" splitType="Stretch">
+			<image>
+				<reportElement x="524" y="383" width="200" height="24" uuid="d6c56966-4301-48e5-8b05-1806a6e1847c"/>
+				<imageExpression><![CDATA["/Users/Murilo/Desktop/assi Daniela1.png"]]></imageExpression>
+			</image>
 			<staticText>
 				<reportElement x="467" y="442" width="302" height="20" uuid="9a87b6c4-12cc-4953-9632-4509f40d1f34"/>
 				<textElement textAlignment="Center" markup="html"/>
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="72" y="442" width="302" height="15" uuid="932c893b-dcf7-4857-89e2-3df4966016cd"/>
-				<textElement textAlignment="Center" markup="html"/>
-				<text><![CDATA[<i>Portaria nº 203 de 31 de Janeiro de 2014</i>]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="467" y="407" width="302" height="18" uuid="904a190d-9ef8-487b-bb4d-1bd10860b31a"/>
 				<textElement textAlignment="Center" verticalAlignment="Bottom" markup="html">
-					<font size="14"/>
+					<font size="12"/>
 				</textElement>
 				<text><![CDATA[<b>Daniela Pereira Versieux</b>]]></text>
 			</staticText>
@@ -42,28 +41,14 @@
 				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="html">
 					<font size="20"/>
 				</textElement>
-				<textFieldExpression><![CDATA["<pre>		Certificamos que <b>" + $F{nome} + "</b> participou da <b>VI Semana de Educação, Ciência e Tecnologia</b> do IFG Câmpus Formosa nos dias 16, 17 e 18 de Novembro de 2015, com carga horária de " + $F{cargaTotal} + " horas. As atividades participantes estão discriminadas no verso.</pre>"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["<pre>		Certificamos que <b>" + $F{nome} + "</b> participou da <b>VI Semana de Educação, Ciência e Tecnologia</b> do IFG Câmpus Formosa nos dias 16, 17 e 18 de Novembro de 2015, com carga horária de " + $F{cargaTotal} + ". As atividades participantes estão discriminadas no verso.</pre>"]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="467" y="425" width="302" height="17" uuid="77589562-5fe1-478c-9b85-dcec75527b3c"/>
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="html">
-					<font size="12"/>
+					<font size="10"/>
 				</textElement>
 				<text><![CDATA[Presidente da Comissão Organizadora]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="72" y="425" width="302" height="17" uuid="e336d433-b992-421b-8d4d-74e67a8d627e"/>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font size="12"/>
-				</textElement>
-				<text><![CDATA[Diretor Geral do Câmpus Formosa]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="72" y="407" width="302" height="18" uuid="b2bc744c-e26f-46cc-a08f-a342e5767573"/>
-				<textElement textAlignment="Center" verticalAlignment="Bottom" markup="html">
-					<font size="14"/>
-				</textElement>
-				<text><![CDATA[<b>Edson Rodrigo Borges</b>]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="359" y="307" width="410" height="42" uuid="65e4c22f-2b3a-4584-9f5d-fa72feb33895"/>
@@ -72,15 +57,16 @@
 				</textElement>
 				<text><![CDATA[Formosa - GO, 14 de Dezembro de 2015.]]></text>
 			</staticText>
+			<image>
+				<reportElement x="72" y="339" width="300" height="135" uuid="63287e39-7bb0-435e-8c67-47410fa65db7"/>
+				<imageExpression><![CDATA["/Users/Murilo/Desktop/edson12.jpg"]]></imageExpression>
+			</image>
 			<staticText>
-				<reportElement x="467" y="387" width="302" height="20" uuid="b625c59c-e433-4426-ace3-73195cce8c0b"/>
-				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
-				<text><![CDATA[_____________________________________________]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="72" y="387" width="302" height="20" uuid="385d15b2-3f16-4156-8fff-a50cb68413aa"/>
-				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
-				<text><![CDATA[_____________________________________________]]></text>
+				<reportElement x="468" y="389" width="302" height="18" uuid="11bbf8b5-d2ee-471a-9567-c96887868e11"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" markup="html">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[___________________________________________________]]></text>
 			</staticText>
 		</band>
 		<band height="595">
@@ -95,7 +81,7 @@
 			<textField>
 				<reportElement x="511" y="477" width="258" height="108" uuid="905efccc-9b45-4880-bec9-4c73d547b84f"/>
 				<textElement textAlignment="Center" markup="html"/>
-				<textFieldExpression><![CDATA["CERTIFICADO REGISTRADO NO LIVRO IV - GEPPEX/IFG/FORMOSA<br><br>27 / NOVEMBRO / 2014<br><br><br>____________________________<br>Assinatura"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["CERTIFICADO REGISTRADO NO LIVRO V - <br> FLS 48-60 GEPPEX/IFG/FORMOSA<br>____/____/______<br><br>____________________________<br>Assinatura<br><br>___________________<br>SIAPE"]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="72" y="477" width="155" height="29" uuid="d7cd1147-e31b-4cf5-9ffe-d84c2721c14a"/>

@@ -4,10 +4,8 @@ import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 import javax.swing.JOptionPane;
 
@@ -54,25 +52,15 @@ public class ControleCertificado {
 			e.printStackTrace();
 		}
         JOptionPane.showMessageDialog(null, "Relatório gerado. Atualize o projeto, o relatório aparecerá na raiz.", "Info", JOptionPane.INFORMATION_MESSAGE);
-		/*List<CertificadoJasper> lcj = atribuirCHeAtividade(cps);
+		//List<CertificadoJasper> lcj = atribuirCHeAtividade(cps);
 		Iterator<CertificadoJasper> it = lcj.iterator();
 		int x = 0;
 		while(it.hasNext()){
 			CertificadoJasper cp = it.next();
-			System.out.println("\n\n\n###############");
-			System.out.println("Participante: " + cp.getNome());
-			System.out.println("CargaHorariaTotal: " + cp.getCargaTotal());
-			System.out.println("\n Atividades: ");
-			Iterator<AtividadeJasper> iap = cp.getAtividades().iterator();
-			
-			while(iap.hasNext()){
-				
-				AtividadeJasper aj = iap.next();
-				System.out.println("Nome: " + aj.getNomeAtivid());
-				System.out.println("carga: " + aj.getCargaAtivid());
-			}
+			System.out.println(cp.getNome());
 			x++;
-		}*/
+		}
+		System.out.println(x);
 		
 	}
 	
